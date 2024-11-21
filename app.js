@@ -94,7 +94,7 @@ const mailSubscriber = async(topic) => {
     redisClient.subscribe(topic, (channel, message) => {
         //console.log(channel);
         const mailData = JSON.parse(channel);
-        console.log(`mail data: ${mailData.mail_id}, ${mailData.subject}, ${mailData.attribute.amount}, ${mailData.attribute.place}`);
+        console.log(`[subscribe] mail data: ${mailData.mail_id}, ${mailData.subject}, ${mailData.attribute.amount}, ${mailData.attribute.place}`);
     });
 };
 
